@@ -401,8 +401,6 @@ li > a:visited::after {
 
 @media (max-width: 680px) {
    
-
-
     .lin {
     display: none;
   }
@@ -410,10 +408,10 @@ li > a:visited::after {
   .menu-toggle {
     display: block;
     margin-top: 10px;
-   
+    position: fixed;
+    
+ 
   }
-
-   
 
   .cosmetics{
     margin-left: 20px;
@@ -431,13 +429,19 @@ li > a:visited::after {
 
 .ion {
   display: flex;
-  justify-content: flex-end; /* move icons to right */
+  justify-content: flex-end; 
   align-items: center;
-/* space between cart and person */
- 
   margin-left: -400px;
   margin-top: -10px;
 }
+.nav-links {
+  margin-top: 120px;
+}
+
+  /* Lower login button and icon under links */
+  .bottom-icons {
+    margin-top: 40px;
+  }
 
 
 .input-box a{
@@ -469,6 +473,8 @@ li > a:visited::after {
   .footer-bottom {
     font-size: 11px;
   }
+  
+
    
 
    
