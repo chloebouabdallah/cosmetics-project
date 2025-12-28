@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="home.css">
+    <link rel="stylesheet"  href="links.css">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Register</title>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: hsl(0,0%,95%);
+    }
+    .login-form{
+        background-color:  hsl(0,0%,100%);
+        justify-content: center;
+        max-width: 350px;
+        margin: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 80px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px hsla(0,0%,0%,0.3);
+        margin-top: 150px;
+    }
+    .containerr{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .login-form h1{
+        
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: gray;
+        margin-bottom: 10px;
+    }
+    
+    
+    .content{
+       flex-basis: 50%; 
+      
+       background: #fff;
+       
+    }
+    input[type="text"], textarea {
+    padding: 15px;
+    width: 120%;
+    border: 1px solid rgb(205, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+   
+}
+
+
+input[type="text"]:focus, textarea:focus {
+    border:2px solid violet;
+    outline: none;
+}
+
+ input[type="email"], textarea {
+    padding: 15px;
+    width: 120%;
+    border: 1px solid rgb(205, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+   
+}
+
+
+input[type="email"]:focus, textarea:focus {
+    border:2px solid violet;
+    outline: none;
+}
+
+input[type="password"], textarea {
+    padding: 15px;
+    width: 120%;
+    border: 1px solid rgb(205, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    
+    margin-right:10px ;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+
+input[type="password"]:focus, textarea:focus {
+    border: 2px solid violet;
+    outline: none;
+}
+.logbtn {
+    background-color:violet; 
+    width: 120%;
+    color: white;              
+    border: none;              
+    padding: 8px 25px;        
+    font-size: 16px;           
+    font-weight: bold;         
+    border-radius: 20px;        
+    cursor: pointer;           
+    transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+.logbtn:hover {
+    background-color: gray; 
+    transform: scale(1.05);   
+}
+
+/* Active (click) effect */
+.logbtn:active {
+    transform: scale(0.98);    
+    background-color: gray; 
+}
+.logbtn:nth-of-type(2) {
+    background-color: gray;
+}
+
+.logbtn:nth-of-type(2):hover {
+    background-color:gray;
+}
+.content p{
+    margin-top: 40px;
+    color: grey;
+    text-align: center;
+}
+.content a{  
+    color: violet;  
+    font-weight: bold;
+}
+.content a:hover{  
+    color: violet;  
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+  </style>
+ </head>
+
+
+ <body>
+    
+      <div class="login-form">
+      <h1> Sign Up</h1>
+      <div class="containerr">
+        <div class="main">
+            <div class="content">
+               
+                <form id="signup-form" action="" method="post">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email"  id ="mail" placeholder="Email" required>    
+                    <input type="password"  id="pass" placeholder=" Password" required>
+                    <input type="password" id="confirmpass" placeholder="Confirm  password" required>
+
+                    <button class="logbtn" id="signupbtn" type="submit"> Sign Up  </button>
+
+                </form>
+                <p class="account"> Already have an account? <a href="login.html">Log in</a></p><br><br>
+                <p id="error-mssg"></p>
+            </div>
+           
+        </div>
+
+      </div>
+
+      </div>
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('mail');
+  const passInput = document.getElementById('pass');
+  const confirmpassInput = document.getElementById('confirmpass');
+  const signupForm = document.getElementById('signup-form');
+  const errorPara = document.getElementById('error-mssg');
+
+  signupForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // stop normal form submission
+    let isValid = true;
+    errorPara.innerHTML = '';
+    errorPara.style.color = 'violet';
+
+    if (nameInput.value.trim() === '') {
+      isValid = false;
+      errorPara.innerHTML += 'Name is required! <br>';
+    }
+
+    if (emailInput.value.trim() === '') {
+      isValid = false;
+      errorPara.innerHTML += 'Email is required! <br>';
+    } else if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+      isValid = false;
+      errorPara.innerHTML += 'Email is not valid! <br>';
+    }
+
+    if (passInput.value.trim() === '') {
+      isValid = false;
+      errorPara.innerHTML += 'Password is required! <br>';
+    }
+
+    if (confirmpassInput.value.trim() === '') {
+      isValid = false;
+      errorPara.innerHTML += 'Password Confirmation is required! <br>';
+    } else if (passInput.value !== confirmpassInput.value) {
+      isValid = false;
+      errorPara.innerHTML += 'Passwords should match!<br>';
+    }
+
+    if (isValid) {
+      // ✅ Save user info in localStorage
+      localStorage.setItem("userEmail", emailInput.value);
+      localStorage.setItem("userPassword", passInput.value);
+
+      alert("Signup successful! Redirecting to login page...");
+      window.location.href = "login.html"; // go to login page
+    }
+  });
+});
+</script>
+
+
+ </body>
+</html>
+
+    
+    
+        
+        
+  

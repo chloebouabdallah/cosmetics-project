@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="links.css">
+  <link rel="stylesheet" href="checkout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <title>Checkout</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+ <header>
+<nav>
+    <div class="first">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <div class="title-and-links">
+        <h1 class="cosmetics">Cosmetics</h1>
+        <ul class="lin" id="desktop-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="ion">
+        <div class="input-box">
+           <a href="login.html">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+  
+    </div>
+    
+    </div>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="nav-overlay" id="nav-overlay">
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+         <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+      </ul>
+      <div class="bottom-icons">
+        <a href="login.html">👤 Log in</a>
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <div class="container">
+      
+        <div class="checkout">
+            <div class="contact">
+              <form id="checkoutForm">
+           <h1>Contact</h1>
+           
+            <input type="email" placeholder="Email or phone number" required /><br>
+
+          <div class="checkbox-group">
+           <input type="checkbox" id="emailme">
+          <label for="emailme">Email me with news and offers</label>
+       </div>
+           </form>
+           </div>
+
+           <div class="delivery">
+              <form id="checkoutForm">
+            <h1>Delivery</h1>
+           
+                <div class="check">
+                    <select name="country" id="country" >    
+	                <option value="leb">Lebanon</option></select>
+
+                </div>
+                <div class="name">
+                    <div class="fname">
+                     <input type="text" name="fname" id="fname" placeholder="First name"> 
+                     <input type="text" name="fname" id="fname" placeholder="Last name">  
+                    </div>
+                </div>
+                <div class="address">
+                    <input type="text" name="address" id="address" placeholder="Address"> <br>
+                    <input type="text" name="app" id="app" placeholder="Apartment,suit,ect"> 
+                </div>
+
+                <div class="city">
+                     <input type="text" name="city" id="city" placeholder="City"> 
+                     <input type="text" name="post" id="post" placeholder="Postal code(optional)">
+                </div>
+
+                <div class="phone">
+                   <input type="password" name="post" id="post" placeholder="Phone"> <br>
+
+
+                
+                 <div class="checkbox-group">
+                <input type="checkbox" id="emailme">
+                <label for="emailme">Save this information for next time</label>
+             </div>
+                </div>
+
+                
+    <div class="section">
+        <h1>Shipping method</h1>
+        <div class="radio-group">
+            <label><input type="radio" name="shipping" checked> Express Shipping — $4.00</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Payment</h1>
+        <p>All transactions are secure and encrypted.</p>
+        <div class="radio-group">
+            <label><input type="radio" name="payment" checked> Cash on Delivery (COD)</label>
+            <small>Only available in Lebanon. Any customer outside of Lebanon that chooses the COD option will get their order cancelled.</small>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Billing address</h1>
+        <div class="radio-group">
+            <label><input type="radio" name="billing" checked> Same as shipping address</label>
+            <label><input type="radio" name="billing"> Use a different billing address</label>
+        </div>
+    </div>
+
+    <button type="submit">submit</button>
+    </form>
+    <div class="footer-links">
+        <span><hr></span>
+        <a href="#">Refund policy</a> | 
+        <a href="#">Privacy policy</a> | 
+        <a href="#">Terms of service</a> | 
+        <a href="#">Cancellation policy</a> | 
+        <a href="#">Contact information</a>
+    </div>
+</div>
+
+
+
+            
+           </div>
+
+  <div class="order-summary" id="orderSummary">
+  <h2>Order Summary</h2>
+ <div class="order-item">
+  <div class="img-badge-container">
+    <img src="img9.jpg" alt="Peony Hydrating Lip Oil">
+    <span class="badge">2</span>
+  </div>
+  <div>
+    <p><strong>Powder Flower Blush</strong></p>
+    <p>Price: $40.00</p>
+  </div>
+</div>
+
+
+  <div class="totals">
+    <div><span>Subtotal</span><span>$45.00</span></div>
+    <div><span>Shipping</span><span>$4.00</span></div>
+    <div class="total"><span>Total</span><span>$49.00</span></div>
+  </div>
+</div>
+
+
+
+           
+
+           
+
+
+
+
+
+
+        </div>
+
+      
+
+      
+
+
+
+
+
+
+
+</main>
+
+<script src="home.js"></script>
+<script>
+
+  document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevents page reload or redirect
+    alert("Thank u for contacting us");
+    this.reset(); // Clears all fields
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Load cart item from localStorage
+  const item = JSON.parse(localStorage.getItem('cartItem'));
+  const orderSummary = document.getElementById('orderSummary');
+
+  // Display order summary
+  if (item && item.quantity > 0) {
+    orderSummary.innerHTML = `
+      <h2>Order Summary</h2>
+      <div class="order-item">
+        <div class="img-badge-container">
+          <img src="${item.image}" alt="${item.name}">
+          <span class="badge">${item.quantity}</span>
+        </div>
+        <div style="flex-grow:1;">
+          <p><strong>${item.name}</strong></p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+        </div>
+      </div>
+      <div class="totals">
+        <div><span>Subtotal</span><span>$${item.total.toFixed(2)}</span></div>
+        <div><span>Shipping</span><span>$4.00</span></div>
+        <div class="total"><span>Total</span><span>$${(item.total + 4).toFixed(2)}</span></div>
+      </div>
+    `;
+  } else {
+    orderSummary.innerHTML = "<p>Your cart is empty.</p>";
+  }
+
+  // Handle form submit
+  const form = document.getElementById('checkoutForm');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // stop form from reloading the page
+
+      // Clear the entire body and show thank you message
+      document.body.innerHTML = `
+        <div style="text-align:center; margin-top: 100px;">
+          <h1>Thank you for ordering from us!</h1>
+          <p>Your order has been received and is being processed.</p>
+        </div>
+      `;
+
+      // Optional: clear the cart
+      localStorage.removeItem('cartItem');
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const container = document.getElementById('checkout-items');
+  const totalElement = document.getElementById('checkout-total');
+  let total = 0;
+
+  if (cartItems.length === 0) {
+    container.innerHTML = '<p>Your cart is empty.</p>';
+    totalElement.textContent = '$0.00 USD';
+    return;
+  }
+
+  cartItems.forEach(item => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const itemEl = document.createElement('div');
+    itemEl.className = 'checkout-item';
+    itemEl.innerHTML = `
+      <img src="${item.imgSrc}" alt="${item.name}" class="checkout-img">
+      <div class="checkout-info">
+        <p><strong>${item.name}</strong></p>
+        <p>Price: $${item.price.toFixed(2)}</p>
+        <p>Quantity: <span class="item-qty">${item.quantity}</span></p>
+        <p>Total: $${itemTotal.toFixed(2)}</p>
+      </div>
+    `;
+    container.appendChild(itemEl);
+  });
+
+  totalElement.textContent = `$${total.toFixed(2)} USD`;
+});
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="home.css">
+    <link rel="stylesheet"  href="links.css">
+    <link rel="stylesheet"  href="product.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+   
+    
+    <title>Pixi Blush</title>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+
+    .product-image {
+     
+      max-width: 500px;
+      height: 550px;
+     
+    }
+
+    .hover-img {
+      position: relative;
+    }
+
+    .hover-img img {
+     
+      width: 100%;
+      max-width: 500px;
+      height: 550px;
+     
+    }
+
+     @media (max-width: 500px) {
+      
+
+      .product-details {
+        text-align: center;
+        margin-top: 40px;
+        margin-right: 40px;
+      }
+     
+
+       .product-image {
+     
+      max-width: 500px;
+      height: 450px;
+     
+    }
+
+
+    .hover-img img {
+     
+      width: 100%;
+      max-width: 500px;
+      height: 450px;
+     
+    }
+
+    }
+  </style>
+ </head>
+
+  <body>
+    <header>
+<nav>
+    <div class="first">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <div class="title-and-links">
+        <h1 class="cosmetics">Cosmetics</h1>
+        <ul class="lin" id="desktop-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="ion">
+        <div class="input-box">
+           <a href="login.html">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+  
+    </div>
+    <div class="icon-cart">
+          <ion-icon name="cart-outline"></ion-icon>
+          <span>0</span>
+
+        </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="nav-overlay" id="nav-overlay">
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+         <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+      </ul>
+      <div class="bottom-icons">
+        <a href="login.html">👤 Log in</a>
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+<div class="prod1">
+<div class="product-image hover-img">
+<img src="img14.webp" alt="Main Image" class="main-img">
+<img src="img37.webp" alt="Hover Image" class="hover-img-alt">
+</div>
+<div class="product-details">
+<h1>Pixi Blush</h1>
+<p class="stars">⭐⭐⭐⭐⭐ <span>(21 reviews)</span></p>
+<p class="price">$40.00</p>
+<div class="quantity">
+<label>Quantity</label>
+<div class="qty-controls">
+<button> - </button>
+<input type="number" value="1" min="1" readonly>
+<button>+</button>
+</div>
+</div>
+<button class="cart-btn">Add to cart</button>
+<a href="checkout.html">
+<button class="buy-now" id="buyNowBtn">Buy it now</button>
+</a>
+<div class="description">
+<h3>Why Us?</h3>
+<p>Our Pixi Blush delivers a <strong>soft, radiant glow</strong> with a unique floral design that’s as stunning in the pan as it is on your cheeks!🌸</p>
+<p>Infused with <strong>skin-loving ingredients</strong> like Vitamin E and Rose Extract, it blends effortlessly for a <strong>natural, buildable flush</strong> that flatters every skin tone.✨</p>
+</div>
+</div>
+</div>
+
+<div class="cart-drawer" id="cartDrawer">
+<div class="cart-header">
+<h2>Your cart</h2>
+<button class="close-cart" id="closeCart">&times;</button>
+</div>
+<div class="cart-item">
+
+<img src="img14.webp" alt="Powder Flower Blush" class="cart-img">
+<div class="cart-info">
+<p><strong>Pixi Blush</strong></p>
+<p>$40.00</p>
+
+<div class="qty-controls">
+<button id="cartMinus">-</button>
+<input type="number" id="cartQty" value="1" readonly>
+<button id="cartPlus">+</button>
+</div>
+
+</div>
+<p class="cart-total" id="cartTotal">$40.00</p>
+<div class="bin" id="removeItem">
+<ion-icon name="trash-bin-outline"></ion-icon>
+</div>
+</div>
+<div class="empty" id="emptyState" style="display: none;">
+<p>Your cart is empty! <br>Feel free to shop whatever you want to!</p>
+<a href="home.html">
+<button class="more">Shop here</button>
+</a>
+</div>
+
+<div class="estimated">
+<p>Estimated total</p>
+<p id="estimatedTotal">$40.00 USD</p>
+</div>
+<a href="checkout.html">
+<button class="checkout-btn">Check out</button>
+</a>
+</div>
+
+</main>
+
+
+<footer class="footer">
+  <div class="subscribe">
+    <h1>Subscribe to our emails</h1>
+    <h3>Be the first to know about new collections and stay updated!</h3>
+    <form class="email-form">
+      <input type="email" placeholder="Email" required />
+      <button type="submit">→</button>
+    </form>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr >
+    <p>copyright from google· 
+      <a href="#">Refund policy</a> · 
+      <a href="#">Privacy policy</a> · 
+      <a href="#">Terms of service</a> · 
+      <a href="#">Contact information</a>
+    </p>
+  </div>
+  
+</footer>
+
+<script src="home.js"></script>
+<script>
+
+
+// Helper function to update the cart badge and save to localStorage
+function updateCartCounter(qty) {
+const cartCounter = document.querySelector('.icon-cart span');
+if (cartCounter) {
+cartCounter.textContent = qty;
+}
+localStorage.setItem('cartQuantity', qty);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+// Load saved quantity or 0 if none
+let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
+
+// Immediately update badge on page load
+updateCartCounter(cartQuantity);
+
+const cartCounter = document.querySelector('.icon-cart span');
+const qtyInput = document.querySelector('.product-details .qty-controls input');
+const minusBtn = document.querySelector('.product-details .qty-controls button:first-child');
+const plusBtn = document.querySelector('.product-details .qty-controls button:last-child');
+
+const cartMinus = document.getElementById('cartMinus');
+const cartPlus = document.getElementById('cartPlus');
+const cartQty = document.getElementById('cartQty');
+
+const cartTotal = document.getElementById('cartTotal');
+const estimatedTotal = document.getElementById('estimatedTotal');
+const unitPrice = 40;
+
+// Initialize qty inputs: if cartQuantity > 0 use it, else default 1
+cartQty.value = cartQuantity > 0 ? cartQuantity : 1;
+qtyInput.value = 1;
+
+function updateCartTotal() {
+const qty = parseInt(cartQty.value);
+const total = qty * unitPrice;
+cartTotal.textContent = `$${total.toFixed(2)}`;
+estimatedTotal.textContent = `$${total.toFixed(2)} USD`;
+updateCartCounter(qty); // update badge and localStorage whenever total updates
+}
+
+// Quantity controls outside product details
+plusBtn.addEventListener('click', () => {
+qtyInput.value = parseInt(qtyInput.value) + 1;
+cartQty.value = parseInt(cartQty.value) + 1;
+updateCartTotal();
+});
+
+minusBtn.addEventListener('click', () => {
+if (parseInt(qtyInput.value) > 1) {
+qtyInput.value = parseInt(qtyInput.value) - 1;
+cartQty.value = parseInt(cartQty.value) - 1;
+updateCartTotal();
+}
+});
+
+// Quantity controls inside cart drawer
+cartPlus.addEventListener('click', () => {
+cartQty.value = parseInt(cartQty.value) + 1;
+updateCartTotal();
+});
+
+cartMinus.addEventListener('click', () => {
+if (parseInt(cartQty.value) > 1) {
+cartQty.value = parseInt(cartQty.value) - 1;
+updateCartTotal();
+}
+});
+
+// Add to cart button opens drawer and updates total
+const openCartBtn = document.querySelector('.cart-btn');
+const cartDrawer = document.getElementById('cartDrawer');
+openCartBtn.addEventListener('click', () => {
+let productQty = parseInt(qtyInput.value);
+cartQty.value = productQty;
+updateCartTotal();
+cartDrawer.classList.add('open');
+});
+
+// Remove item button hides item and resets cart quantities
+const binIcon = document.getElementById('removeItem');
+const cartItem = document.querySelector('.cart-item');
+const emptyState = document.getElementById('emptyState');
+
+binIcon.addEventListener('click', () => {
+cartItem.style.display = 'none';
+emptyState.style.display = 'block';
+cartQty.value = 0;
+cartTotal.textContent = '$0.00';
+estimatedTotal.textContent = '$0.00 USD';
+updateCartCounter(0); // reset badge and localStorage on remove
+});
+
+// Close cart drawer button
+document.getElementById('closeCart').addEventListener('click', () => {
+cartDrawer.classList.remove('open');
+});
+
+// Initialize total and badge on page load if quantity > 0
+if (cartQuantity > 0) {
+cartQty.value = cartQuantity;
+updateCartTotal();
+} else {
+cartQty.value = 1;
+}
+
+// Optional: listen for storage events to sync badge across tabs/windows
+window.addEventListener('storage', (event) => {
+if (event.key === 'cartQuantity') {
+const newQty = parseInt(event.newValue) || 0;
+updateCartCounter(newQty);
+}
+});
+});
+
+
+document.getElementById('buyNowBtn').addEventListener('click', () => {
+const qty = parseInt(document.querySelector('.qty-controls input').value);
+const item = {
+name: "Pixi Blush",
+price: 40,
+image: "img14.webp",
+quantity: qty,
+total: qty * 40
+};
+localStorage.setItem('cartItem', JSON.stringify(item));
+localStorage.setItem('cartQuantity', qty);
+window.location.href = 'checkout.html';
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

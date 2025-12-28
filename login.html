@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="home.css">
+    <link rel="stylesheet"  href="links.css">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Login</title>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+
+    *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: hsl(0,0%,95%);
+    }
+    .login-form{
+        background-color:  hsl(0,0%,100%);
+        justify-content: center;
+        max-width: 350px;
+        margin: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 80px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px hsla(0,0%,0%,0.3);
+        margin-top: 150px;
+    }
+    .containerr{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .login-form h1{
+        
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: gray;
+        margin-bottom: 10px;
+    }
+    
+    
+    .content{
+       flex-basis: 50%; 
+      
+       background: #fff;
+       
+    }
+    input[type="text"], textarea {
+    padding: 15px;
+    width: 120%;
+    border: 1px solid rgb(205, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+   
+}
+
+
+input[type="text"]:focus, textarea:focus {
+    border:2px solid violet;
+    outline: none;
+}
+
+input[type="password"], textarea {
+    padding: 15px;
+    width: 120%;
+    border: 1px solid rgb(205, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    
+    margin-right:10px ;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+
+input[type="password"]:focus, textarea:focus {
+    border: 2px solid violet;
+    outline: none;
+}
+.logbtn {
+    background-color:violet; 
+    width: 120%;
+    color: white;              
+    border: none;              
+    padding: 8px 25px;        
+    font-size: 16px;           
+    font-weight: bold;         
+    border-radius: 20px;        
+    cursor: pointer;           
+    transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+.logbtn:hover {
+    background-color: gray; 
+    transform: scale(1.05);   
+}
+
+/* Active (click) effect */
+.logbtn:active {
+    transform: scale(0.98);    
+    background-color: gray; 
+}
+.logbtn:nth-of-type(2) {
+    background-color: gray;
+}
+
+.logbtn:nth-of-type(2):hover {
+    background-color:gray;
+}
+.content p{
+    margin-top: 40px;
+    color: grey;
+    text-align: center;
+}
+.content a{  
+    color: violet;  
+    font-weight: bold;
+}
+.content a:hover{  
+    color: violet;  
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+  </style>
+ </head>
+
+
+ <body>
+    
+      <div class="login-form">
+      <h1> Login</h1>
+      <div class="containerr">
+        <div class="main">
+            <div class="content">
+               
+                <form action="" method="post">
+                    <input type="text" name="" placeholder="User name" required autofocus="">
+                    <input type="password" name="" placeholder="User password" required autofocus="">
+                    <button class="logbtn" type="submit"> Login  </button>
+
+                </form>
+                
+                <p class="account"> Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+           
+        </div>
+
+      </div>
+
+      </div>
+
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.querySelector("form");
+
+  loginForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // stop form submit
+
+    const enteredEmail = loginForm.querySelector("input[type='text']").value;
+    const enteredPassword = loginForm.querySelector("input[type='password']").value;
+
+    // get saved values
+    const savedEmail = localStorage.getItem("userEmail");
+    const savedPassword = localStorage.getItem("userPassword");
+
+    if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
+      alert("Login successful!");
+      // redirect to your homepage
+      window.location.href = "home.html"; 
+    } else {
+      alert("Invalid email or password!");
+    }
+  });
+});
+</script>
+
+    
+
+ </body>
+</html>
+
+    
+    
+        
+        
+  

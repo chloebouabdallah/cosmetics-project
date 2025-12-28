@@ -1,0 +1,1063 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="links.css">
+  <link rel="stylesheet" href="checkout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <title>Checkout</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+
+    * {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+.hr span{
+
+color: rgb(255, 247, 247);
+
+padding-bottom: 50px;
+
+
+}
+
+.container {
+
+display: flex;
+
+justify-content: space-between;
+
+padding: 30px;
+
+width: 100%;
+
+height: 100%;
+
+align-items: stretch;
+
+
+}
+
+main {
+
+display: flex;
+
+height: 100%; /* Give full height to allow scroll context */
+
+/* Prevent page scroll while allowing panel scroll */
+
+}
+
+.checkout {
+
+width: 55%;
+
+border-right: 1px solid lightslategray;
+
+margin-top: -30px;
+
+margin-bottom: 30px;
+
+}
+
+form{
+
+margin-left: 150px;
+
+}
+
+h1{
+
+font-size: 25px;
+
+
+}
+
+.contact{
+
+margin-top: 30px;
+
+margin-left: 25px;
+
+}
+
+.contact h1{
+
+margin-bottom: 20px;
+
+margin-top: 60px;
+
+}
+
+.contact input{
+
+padding: 15px;
+
+width: 90%;
+
+border-radius: 5px;
+
+border:1px solid lightgrey;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+}
+
+.contact input[type="checkbox"] {
+
+width: 20px;
+
+height: 20px;
+
+padding: 20px;
+
+margin-right: 5px;
+
+margin-top: 20px;
+
+accent-color: violet;
+
+}
+
+.checkbox-group {
+
+display: flex;
+
+align-items: center;
+
+gap: 8px; /* Space between checkbox and label */
+
+}
+
+/* Correct selector for the label related to form elements */
+
+.contact label {
+
+margin-left: 5px;
+
+margin-top:22px ;
+
+}
+
+.delivery{
+
+margin-top: 40px;
+
+margin-left: 25px;
+
+}
+
+.delivery h1{
+
+margin-bottom: 20px;
+
+}
+
+.delivery label {
+
+display: block;
+
+margin-bottom: 20px;
+
+font-size: 14px;
+
+color: #333;
+
+
+}
+
+.delivery select {
+
+padding: 15px;
+
+width: 90%;
+
+border-radius: 5px;
+
+border: 1px solid lightgray;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+
+}
+
+.name input{
+
+padding: 15px;
+
+width: 44.5%;
+
+border-radius: 5px;
+
+border:1px solid lightgrey;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+margin-top: 20px;
+
+}
+
+.address input{
+
+padding: 15px;
+
+width: 90%;
+
+border-radius: 5px;
+
+border:1px solid lightgrey;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+margin-top: 20px;
+
+}
+
+.city input{
+
+padding: 15px;
+
+width: 44.5%;
+
+border-radius: 5px;
+
+border:1px solid lightgrey;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+margin-top: 20px;
+
+}
+
+.phone input{
+
+padding: 15px;
+
+width: 90%;
+
+border-radius: 5px;
+
+border:1px solid lightgrey;
+
+font-size: 14px;
+
+color: #333;
+
+background: #f9f9f9;
+
+margin-top: 20px;
+
+}
+
+.phone input[type="checkbox"] {
+
+width: 20px;
+
+height: 20px;
+
+padding: 20px;
+
+margin-right: 5px;
+
+margin-top: 20px;
+
+accent-color: violet;
+
+margin-bottom: 20px;
+
+}
+
+.phone label {
+
+margin-left: 5px;
+
+margin-top:22px ;
+
+color: black;
+
+font-size: 15px;
+
+}
+
+.checkout-container {
+
+margin-left: 25px;
+
+
+}
+
+.checkout-container h1 {
+
+
+margin-bottom: 15px;
+
+}
+
+.section {
+
+margin-bottom: 20px;
+
+width: 90%;
+
+}
+
+.section label {
+
+display: block;
+
+margin-bottom: 8px;
+
+font-size: 14px;
+
+color: #333;
+
+}
+
+.section select,
+
+.section input[type="text"] {
+
+width: 100%;
+
+padding: 15px;
+
+border: 1px solid lightgray;
+
+border-radius: 5px;
+
+font-size: 14px;
+
+background: #f9f9f9;
+
+}
+
+.radio-group {
+
+border: 1px solid lightgray;
+
+border-radius: 5px;
+
+padding: 15px;
+
+margin-bottom: 20px;
+
+background: #fafafa;
+
+}
+
+p{
+
+margin-bottom: 10px;
+
+}
+
+.radio-group label {
+
+display: block;
+
+margin-bottom: 10px;
+
+margin-bottom: 10px;
+
+}
+
+
+#checkoutForm button[type="submit"] {
+
+background: violet;
+
+color: #333;
+
+text-align: center;
+
+padding: 15px;
+
+font-size: 16px;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+width: 90%;
+
+}
+
+.footer-links {
+
+text-align: center;
+
+margin-top: 20px;
+
+margin-left: 100px;
+
+margin-bottom: 50px;
+
+
+
+}
+
+.footer-links hr{
+
+width: 70%;
+
+margin-left: 100px;
+
+margin-bottom: 20px;
+
+margin-top: 20px;
+
+}
+
+.footer-links a {
+
+color: #555;
+
+margin: 0 8px;
+
+text-decoration: none;
+
+font-size: 12px;
+
+}
+
+main {
+
+display: flex;
+
+}
+
+.order-summary {
+
+width: 60%;
+
+
+padding-left: 30px;
+
+margin-top: 40px;
+
+
+max-height: 90vh; /* Limit height relative to the screen */
+
+overflow-y: auto; /* Enables vertical scroll when content overflows */
+
+padding-right: 10px;
+
+
+
+
+}
+
+.order-summary h2 {
+
+font-size: 20px;
+
+margin-bottom: 15px;
+
+}
+
+.order-item {
+
+display: flex;
+
+align-items: center;
+
+margin-bottom: 15px;
+
+margin-top: 10px;
+
+}
+
+.order-item img {
+
+width: 60px;
+
+height: 60px;
+
+margin-right: 10px;
+
+border-radius: 8px;
+
+margin-top: 10px;
+
+}
+
+.order-details {
+
+flex-grow: 1;
+
+}
+
+.order-item p{
+
+margin-left: 20px;
+
+}
+
+.order-summary .totals {
+
+margin-top: 20px;
+
+font-size: 14px;
+
+color: #333;
+
+margin-right: 10px;
+
+}
+
+.order-summary .totals div {
+
+display: flex;
+
+gap:250px;
+
+margin-bottom: 8px;
+
+}
+
+.order-summary .totals .total {
+
+font-weight: bold;
+
+font-size: 16px;
+
+}
+
+.img-badge-container {
+
+position: relative;
+
+display: inline-block;
+
+}
+
+.img-badge-container img {
+
+width: 60px;
+
+height: 60px;
+
+border-radius: 8px;
+
+}
+
+.img-badge-container .badge {
+
+position: absolute;
+
+top: -8px;
+
+right: -8px;
+
+background-color: violet;
+
+color: white;
+
+border-radius: 50%;
+
+padding: 3px 6px;
+
+font-size: 12px;
+
+font-weight: bold;
+
+}
+
+.checkout-item {
+
+display: flex;
+
+gap: 20px;
+
+margin-bottom: 20px;
+
+border-bottom: 1px solid #eee;
+
+padding-bottom: 10px;
+
+}
+
+.checkout-items{
+
+margin-top: 15px;
+
+}
+
+.estimated {
+
+margin-top: 1rem;
+
+display: flex;
+
+
+
+font-weight: bold;
+
+}
+
+.order-summary {
+
+overflow-y: auto;
+
+max-height: 100%; /* Allows scrolling when many items */
+
+padding-right: 10px; /* Avoids hidden content */
+
+
+}
+
+.totals-container {
+
+margin-top: 20px;
+
+border-top: 1px solid #eee;
+
+padding-top: 15px;
+
+}
+
+.total-row {
+
+display: flex;
+
+justify-content: space-between;
+
+margin-bottom: 10px;
+
+}
+
+.grand-total {
+
+font-weight: bold;
+
+font-size: 1.1em;
+
+margin-top: 10px;
+
+padding-top: 10px;
+
+border-top: 1px solid #eee;
+
+}
+
+
+
+
+@media(max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .checkout {
+    width: 100%;
+    
+    border-right: none;
+    justify-content: center;
+  }
+  
+.section {
+    width: 170%;
+  }
+
+
+
+  .footer-links hr {
+   display: none;
+  }
+  .contact input{
+    padding: 15px;
+    width: 170%;
+    
+
+}
+
+/* Correct selector for the label related to form elements */
+
+.delivery select {
+    padding: 15px;
+    width: 170%;
+    
+
+}
+
+
+.name input{
+    padding: 15px;
+    width: 170%;
+   
+}
+.address input{
+    padding: 15px;
+    width: 170%;
+    
+
+}
+.city input{
+    padding: 15px;
+    width: 170%;
+   
+
+}
+.phone input{
+    padding: 15px;
+    width: 170%;
+   
+}
+#checkoutForm button[type="submit"]{
+  
+  width: 170%;
+}
+
+  .footer-links {
+    width: 120%;
+    margin-top: 30px;
+    
+   justify-content: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+        
+
+
+  </style>
+
+</head>
+<body>
+ <header>
+<nav>
+    <div class="first">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <div class="title-and-links">
+        <h1 class="cosmetics">Cosmetics</h1>
+        <ul class="lin" id="desktop-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="ion">
+        <div class="input-box">
+           <a href="login.html">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+  
+    </div>
+    
+    </div>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="nav-overlay" id="nav-overlay">
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+         <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+      </ul>
+      <div class="bottom-icons">
+        <a href="login.html">👤 Log in</a>
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <div class="container">
+      
+        <div class="checkout">
+            <div class="contact">
+              <form id="checkoutForm">
+           <h1>Contact</h1>
+           
+            <input type="email" placeholder="Email or phone number" required /><br>
+
+          <div class="checkbox-group">
+           <input type="checkbox" id="emailme">
+          <label for="emailme">Email me with news and offers</label>
+       </div>
+           </form>
+           </div>
+
+           <div class="delivery">
+              <form id="checkoutForm">
+            <h1>Delivery</h1>
+           
+                <div class="check">
+                    <select name="country" id="country" >    
+	                <option value="leb">Lebanon</option></select>
+
+                </div>
+                <div class="name">
+                    <div class="fname">
+                     <input type="text" name="fname" id="fname" placeholder="First name"> 
+                     <input type="text" name="fname" id="fname" placeholder="Last name">  
+                    </div>
+                </div>
+                <div class="address">
+                    <input type="text" name="address" id="address" placeholder="Address"> <br>
+                    <input type="text" name="app" id="app" placeholder="Apartment,suit,ect"> 
+                </div>
+
+                <div class="city">
+                     <input type="text" name="city" id="city" placeholder="City"> 
+                     <input type="text" name="post" id="post" placeholder="Postal code(optional)">
+                </div>
+
+                <div class="phone">
+                   <input type="password" name="post" id="post" placeholder="Phone"> <br>
+
+
+                
+                 <div class="checkbox-group">
+                <input type="checkbox" id="emailme">
+                <label for="emailme">Save this information for next time</label>
+             </div>
+                </div>
+
+                
+    <div class="section">
+        <h1>Shipping method</h1>
+        <div class="radio-group">
+            <label><input type="radio" name="shipping" checked> Express Shipping — $4.00</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Payment</h1>
+        <p>All transactions are secure and encrypted.</p>
+        <div class="radio-group">
+            <label><input type="radio" name="payment" checked> Cash on Delivery (COD)</label>
+            <small>Only available in Lebanon. Any customer outside of Lebanon that chooses the COD option will get their order cancelled.</small>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Billing address</h1>
+        <div class="radio-group">
+            <label><input type="radio" name="billing" checked> Same as shipping address</label>
+            <label><input type="radio" name="billing"> Use a different billing address</label>
+        </div>
+    </div>
+
+   <button type="submit">submit</button>
+    </form>
+    <div class="footer-links">
+        <span><hr></span>
+        <a href="#">Refund policy</a> | 
+        <a href="#">Privacy policy</a> | 
+        <a href="#">Terms of service</a> | 
+        <a href="#">Cancellation policy</a> | 
+        <a href="#">Contact information</a>
+    </div>
+</div>
+         
+           </div>
+
+       <div class="order-summary">
+    <h2>Order Summary</h2>
+    <div id="checkoutCartItems" class="checkout-items">
+        <!-- Cart items will appear here -->
+    </div>
+    
+    <div class="totals-container">
+        <div class="total-row">
+            <span>Subtotal:</span>
+            <span id="subtotalDisplay">$0.00</span>
+        </div>
+        <div class="total-row">
+            <span>Shipping:</span>
+            <span id="shippingDisplay">$4.00</span>
+        </div>
+        <div class="total-row grand-total">
+            <span>Estimated Total:</span>
+            <span id="totalDisplay">$0.00</span>
+        </div>
+    </div>
+</div>
+
+        </div>
+       
+ 
+</main>
+<script src="home.js"></script>
+<script>
+
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevents page reload or redirect
+    alert("Thank u for contacting us");
+    this.reset(); // Clears all fields
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Load single cart item from localStorage
+  const item = JSON.parse(localStorage.getItem('cartItem'));
+  const orderSummary = document.getElementById('orderSummary'); // Ensure this ID exists in your HTML
+
+  // Display order summary for a single item
+  if (item && item.quantity > 0) {
+    orderSummary.innerHTML = `
+      <h2>Order Summary</h2>
+      <div class="order-item">
+        <div class="img-badge-container">
+          <img src="${item.image}" alt="${item.name}">
+          <span class="badge">${item.quantity}</span>
+        </div>
+        <div style="flex-grow:1;">
+          <p><strong>${item.name}</strong></p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+        </div>
+      </div>
+      <div class="totals">
+        <div><span>Subtotal</span><span>$${item.total.toFixed(2)}</span></div>
+        <div><span>Shipping</span><span>$4.00</span></div>
+        <div class="total"><span>Total</span><span>$${(item.total + 4).toFixed(2)}</span></div>
+      </div>
+    `;
+  } else {
+    orderSummary.innerHTML = "<p>Your cart is empty.</p>";
+  }
+
+  // Handle form submission
+  const form = document.getElementById('checkoutForm');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Stop form from reloading the page
+
+      // Clear the page and show a thank-you message
+      document.body.innerHTML = `
+        <div style="text-align:center; margin-top: 100px;">
+          <h1>Thank you for ordering from us!</h1>
+          <p>Your order has been received and is being processed.</p>
+        </div>
+      `;
+
+      // Clear the cart
+      localStorage.removeItem('cartItem');
+    });
+  }
+});
+
+ document.addEventListener('DOMContentLoaded', () => {
+    // Load cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const container = document.getElementById('checkoutCartItems');
+    const subtotalElement = document.getElementById('subtotalDisplay');
+    const shippingElement = document.getElementById('shippingDisplay');
+    const totalElement = document.getElementById('totalDisplay');
+    const shippingCost = 4.00;
+    let subtotal = 0;
+
+    // Clear container
+    container.innerHTML = '';
+
+    // If cart is empty
+    if (cartItems.length === 0) {
+        container.innerHTML = '<p>Your cart is empty.</p>';
+        subtotalElement.textContent = '$0.00';
+        shippingElement.textContent = '$4.00';
+        totalElement.textContent = '$4.00';
+        return;
+    }
+
+    // Display each cart item
+    cartItems.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        const itemEl = document.createElement('div');
+        itemEl.className = 'checkout-item';
+        itemEl.innerHTML = `
+            <div class="img-badge-container">
+                <img src="${item.imgSrc}" alt="${item.name}">
+                <span class="badge">${item.quantity}</span>
+            </div>
+            <div class="checkout-info">
+                <p><strong>${item.name}</strong></p>
+                <p>Price: $${item.price.toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Total: $${itemTotal.toFixed(2)}</p>
+            </div>
+        `;
+        container.appendChild(itemEl);
+    });
+
+    // Calculate and display totals
+    const total = subtotal + shippingCost;
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    shippingElement.textContent = `$${shippingCost.toFixed(2)}`;
+    totalElement.textContent = `$${total.toFixed(2)}`;
+
+    // Form submission
+    const form = document.getElementById('checkoutForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.body.innerHTML = `
+                <div style="text-align:center; margin-top: 100px;">
+                    <h1>Thank you for your order!</h1>
+                    <p>Your order has been received and is being processed.</p>
+                </div>
+            `;
+            localStorage.removeItem('cartItems');
+        });
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="home.css">
+    <link rel="stylesheet"  href="links.css">
+    <link rel="stylesheet" href="ContactUs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+   
+
+
+
+
+    
+    <title>Contact Us</title>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </head>
+
+ <body>
+    <header>
+<nav>
+    <div class="first">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <div class="title-and-links">
+        <h1 class="cosmetics">Cosmetics</h1>
+        <ul class="lin" id="desktop-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="ion">
+        <div class="input-box">
+           <a href="login.html">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+  
+    </div>
+    
+    </div>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="nav-overlay" id="nav-overlay">
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+         <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+      </ul>
+      <div class="bottom-icons">
+        <a href="login.html">👤 Log in</a>
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+
+    <form id="my-form">
+                 <h1>Contact :</h1>
+
+                 <div class="cont">
+               
+                <input type="text" name="name" id="name" placeholder="Name">
+                
+                
+                <input type="text" name="email" id="email" placeholder="Email">
+                <br><br>
+            </div>
+                
+                
+                <div class="pass">
+                <input type="text" name="password" id="pass" placeholder="Phone number">
+                <br><br>
+                
+                
+                
+                <textarea name="msg" id="msg" cols="20" rows="5" placeholder="Enter Your message... "></textarea>
+                <br><br>
+                </div>
+           
+        
+                <button type="submit">submit</button>
+            
+            </form>
+        </div>
+        
+
+
+
+
+
+
+</main>
+<footer class="footer">
+  <div class="subscribe">
+    <h1>Subscribe to our emails</h1>
+    <h3>Be the first to know about new collections and stay updated!</h3>
+    <form class="email-form">
+      <input type="email" placeholder="Email" required />
+      <button type="submit">→</button>
+    </form>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr >
+    <p>copyright from google· 
+      <a href="#">Refund policy</a> · 
+      <a href="#">Privacy policy</a> · 
+      <a href="#">Terms of service</a> · 
+      <a href="#">Contact information</a>
+    </p>
+  </div>
+  
+</footer>
+
+
+<script src="home.js"></script>
+<script>
+
+document.getElementById("my-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevents page reload or redirect
+    alert("Thank u for contacting us");
+    this.reset(); // Clears all fields
+});
+ </script>
+ </body>
+</html>

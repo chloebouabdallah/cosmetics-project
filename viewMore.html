@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="home.css">
+    <link rel="stylesheet"  href="links.css">
+
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Cosmetics</title>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>View All</title>
+
+    <style>
+       .box{
+        display: flex;
+        flex-wrap: wrap;
+       }
+
+
+
+
+    </style>
+ </head>
+
+ <body>
+    <header>
+<nav>
+    <div class="first">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <div class="title-and-links">
+        <h1 class="cosmetics">Cosmetics</h1>
+        <ul class="lin" id="desktop-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+        <div class="ion">
+        <div class="input-box">
+           <a href="login.html">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+  
+    </div>
+    <div class="icon-cart">
+          <ion-icon name="cart-outline"></ion-icon>
+          <span>0</span>
+
+        </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="nav-overlay" id="nav-overlay">
+      
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+         <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="Contact us.html">Contact Us</a></li>
+      </ul>
+      <div class="bottom-icons">
+        <a href="login.html">👤 Log in</a>
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+
+   <div class="era-nav-container">
+   <button class="era-nav era-prev">&#10094;</button>
+
+     <div class="box">
+
+       <div class="prod1">
+      <a href="Fenty beauty.html">
+        <img src="img26.avif" alt="Image 9" height="250px" width="250px">
+        <h3> Heat Lip Bomb</h3>
+        <h4> $40.00</h4>
+        </a>
+       <button class="cart" data-name="Fenty Beauty Lip Bomb" data-price="40" data-img="img26.avif">Add to cart</button>
+
+
+       </div>
+      
+
+      <div class="prod1">
+      <a href="Rhode.html">
+        <img src="img21.webp" alt="Image 9" height="250px" width="250px">
+        <h3> Rhode</h3>
+        <h4> $40.00</h4>
+        </a>
+       <button class="cart" data-name="Rhode" data-price="40" data-img="img21.webp">Add to cart</button>
+
+
+       </div>
+      
+
+      <div class="prod1">
+      <a href="maybelline.html">
+        <img src="img25.webp" alt="Image 9" height="250px" width="250px">
+        <h3> Maybelline</h3>
+        <h4> $40.00</h4>
+         </a>
+       <button class="cart" data-name="Maybelline" data-price="40" data-img="img25.webp">Add to cart</button>
+
+       </div>
+        
+
+
+       <div class="prod1">
+      <a href="elf.html">
+        <img src="img23.avif" alt="Image 9" height="250px" width="250px">
+        <h3> Elf</h3>
+        <h4> $40.00</h4>
+        </a>
+        <button class="cart" data-name="Elf" data-price="40" data-img="img23.avif">Add to cart</button>
+
+
+       </div>
+      
+    
+    
+
+      <div class="prod1">
+      <a href="standard.html">
+        <img src="img20.webp" alt="Image 9" height="250px" width="250px">
+        <h3> Standard</h3>
+        <h4> $40.00</h4>
+        </a>
+        <button class="cart" data-name="Standard" data-price="40" data-img="img20.webp">Add to cart</button>
+
+       </div>
+
+      
+       <div class="prod1">
+      <a href="dior.html">
+        <img src="img22.jpg" alt="Image 9" height="250px" width="250px">
+        <h3> Dior</h3>
+        <h4> $40.00</h4>
+         </a>
+        <button class="cart" data-name="Dior" data-price="40" data-img="img22.jpg">Add to cart</button>
+
+
+       </div>
+     
+
+      <div class="prod1">
+      <a href="yse.html">
+        <img src="img24.webp" alt="Image 9" height="250px" width="250px">
+        <h3> YSE</h3>
+        <h4> $40.00</h4>
+        </a>
+         <button class="cart" data-name="YSE" data-price="40" data-img="img24.webp">Add to cart</button>
+
+
+       </div>
+      
+   </div>
+        <button class="era-nav era-next">&#10095;</button>
+     
+    </div>
+
+    
+     <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h1>Your cart</h1>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div id="cartItemsContainer"></div>
+    <div class="empty" id="emptyState" style="display: none;">
+      <p>Your cart is empty!<br />Feel free to shop whatever you want to!</p>
+      <a href="home.html">
+        <button class="more">Shop here</button>
+      </a>
+    </div>
+    <div class="estimated">
+      <p>Estimated total</p>
+      <p id="estimatedTotal">$0.00 USD</p>
+    </div>
+    <a href="checkouthome.html">
+    <button class="checkout-btn">Check out</button>
+    </a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="subscribe">
+    <h1>Subscribe to our emails</h1>
+    <h3>Be the first to know about new collections and stay updated!</h3>
+    <form class="email-form">
+      <input type="email" placeholder="Email" required />
+      <button type="submit">→</button>
+    </form>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <hr >
+    <p>copyright from google· 
+      <a href="#">Refund policy</a> · 
+      <a href="#">Privacy policy</a> · 
+      <a href="#">Terms of service</a> · 
+      <a href="#">Contact information</a>
+    </p>
+  </div>
+  
+</footer>
+
+<script src="home.js"></script>
+<script>
+   
+document.addEventListener('DOMContentLoaded', function() {
+  function setupEraCarousel() {
+    // Only activate below 680px
+    if (window.innerWidth > 680) {
+      cleanupCarousels();
+      return;
+
+      // Reattach "Add to cart" functionality for cloned buttons
+carouselInner.querySelectorAll('.cart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const img = btn.dataset.img;
+    addToCart(name, price, img); // call your cart function from home.js
+  });
+});
+
+    }
+    
+    const productContainers = document.querySelectorAll('.box > div, .box');
+    
+    productContainers.forEach(container => {
+      const products = container.querySelectorAll('.prod1');
+      if (products.length < 3) return;
+      
+      // Create carousel elements
+      const wrapper = document.createElement('div');
+      wrapper.className = 'era-carousel-wrapper';
+      
+      const carousel = document.createElement('div');
+      carousel.className = 'era-carousel';
+      
+      const carouselInner = document.createElement('div');
+      carouselInner.className = 'era-carousel-inner';
+      
+      // Create navigation elements ONLY for mobile
+      const navContainer = document.createElement('div');
+      navContainer.className = 'era-nav-container';
+      
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'era-nav era-prev';
+      prevBtn.innerHTML = '&larr;';
+      
+      const indicator = document.createElement('div');
+      indicator.className = 'era-indicator';
+      
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'era-nav era-next';
+      nextBtn.innerHTML = '&rarr;';
+      
+      // Group products into pages (2 per page)
+      const pages = [];
+      for (let i = 0; i < products.length; i += 2) {
+        pages.push(Array.from(products).slice(i, i + 2));
+      }
+      
+      // Create carousel pages
+      pages.forEach(pageProducts => {
+        const page = document.createElement('div');
+        page.className = 'era-page';
+        pageProducts.forEach(product => page.appendChild(product));
+
+        carouselInner.appendChild(page);
+      });
+      
+      // Carousel state
+      let currentPage = 0;
+      let startPos = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let isDragging = false;
+      let animationID = 0;
+      
+      function updateCarousel() {
+        carouselInner.style.transform = `translateX(-${currentPage * 100}%)`;
+        indicator.textContent = `${currentPage + 1}/${pages.length}`;
+      }
+      
+      function goToPage(page) {
+        currentPage = Math.max(0, Math.min(page, pages.length - 1));
+        updateCarousel();
+      }
+      
+      function animation() {
+        carouselInner.style.transform = `translateX(${currentTranslate}px)`;
+        if (isDragging) {
+          animationID = requestAnimationFrame(animation);
+        }
+      }
+      
+      // Touch/mouse events
+      function handleStart(e) {
+        isDragging = true;
+        startPos = getPositionX(e);
+        currentTranslate = -currentPage * carouselInner.offsetWidth;
+        prevTranslate = currentTranslate;
+        carouselInner.style.transition = 'none';
+        animationID = requestAnimationFrame(animation);
+      }
+      
+      function handleMove(e) {
+        if (isDragging) {
+          const currentPosition = getPositionX(e);
+          currentTranslate = prevTranslate + currentPosition - startPos;
+        }
+      }
+      
+      function handleEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        
+        const movedBy = currentTranslate - prevTranslate;
+        if (movedBy < -50 && currentPage < pages.length - 1) {
+          currentPage += 1;
+        } else if (movedBy > 50 && currentPage > 0) {
+          currentPage -= 1;
+        }
+        
+        goToPage(currentPage);
+        carouselInner.style.transition = 'transform 0.3s ease-out';
+      }
+      
+      function getPositionX(e) {
+        return e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+      }
+      
+      // Event listeners
+      carouselInner.addEventListener('touchstart', handleStart, { passive: true });
+      carouselInner.addEventListener('mousedown', handleStart);
+      carouselInner.addEventListener('touchmove', handleMove, { passive: false });
+      carouselInner.addEventListener('mousemove', handleMove);
+      carouselInner.addEventListener('touchend', handleEnd);
+      carouselInner.addEventListener('mouseup', handleEnd);
+      carouselInner.addEventListener('mouseleave', handleEnd);
+      
+      // Button navigation
+      prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
+      nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
+      
+      // Build navigation
+      navContainer.appendChild(prevBtn);
+      navContainer.appendChild(indicator);
+      navContainer.appendChild(nextBtn);
+      
+      // Assemble carousel
+      carousel.appendChild(carouselInner);
+      carousel.appendChild(navContainer);
+      wrapper.appendChild(carousel);
+      
+      // Replace original content
+      container.innerHTML = '';
+      container.appendChild(wrapper);
+      updateCarousel();
+    });
+  }
+  
+  function cleanupCarousels() {
+    document.querySelectorAll('.era-carousel-wrapper').forEach(wrapper => {
+      const container = wrapper.parentElement;
+      const products = Array.from(wrapper.querySelectorAll('.prod1'));
+      container.innerHTML = '';
+      products.forEach(prod => container.appendChild(prod));
+    });
+  }
+  
+  function handleResize() {
+    if (window.innerWidth <= 680) {
+      setupEraCarousel();
+    } else {
+      cleanupCarousels();
+    }
+  }
+  
+  // Initialize
+  handleResize();
+  window.addEventListener('resize', handleResize);
+});
+
+
+
+</script>
+
+</body>
+</html>

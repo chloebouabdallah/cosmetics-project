@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-and-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cosmetics{
+    font-family: 'Satisfy', cursive;
+    color: violet;
+    font-size: 40px;
+    justify-content: center;
+    margin-top: 20px;
+         
+}
+.lin {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+li > a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  color: grey; /* default */
+  text-decoration: none; /* remove native underline */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 3px;
+  background-color: violet;
+  color: violet;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+li > a:hover::after {
+  width: 50%;
+  
+}
+
+li > a:active::after,
+li > a:visited::after {
+  width: 100%;
+}
+
+
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: none;
+}
+
+/* Rotate button when active */
+.menu-toggle.active {
+  transform: rotate(180deg);
+  color:gray; /* makes the X stand out */
+}
+
+/* Overlay animation */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%; /* hide off-screen */
+  height: 100vh;
+  width: 80%;
+  background-color: white;
+  color: gray;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 20px;
+  z-index: 1000;
+  display: flex;
+  transition: left 0.4s ease;
+  margin-bottom: 20px;
+}
+
+.nav-overlay.active {
+  left: 0; /* slide in */
+}
+
+/* Mobile nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 200px;
+}
+.title-and-links{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.ion {
+  display: flex;
+  justify-content: flex-end; /* move icons to right */
+  align-items: center;
+  gap: 25px; /* space between cart and person */
+  margin-left: 1000px; /* adjust how far from right edge */
+  margin-top: -35px;
+}
+
+.icon-cart {
+  font-size: 1.8rem;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+}
+
+.input-box a {
+  font-size: 1.8rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.icon-cart span {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: violet;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;  /* adjust to sit nicely above icon */
+  right: -10px;
+}
+
+.nav-links a {
+  color: violet;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links > a :hover{
+  color:white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socials a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+.cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 350px;
+      height: 100vh;
+      background-color: #fff;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      z-index: 9999;
+      transition: right 0.3s ease-in-out;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-cart {
+      background: none;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .cart-img {
+      width: 60px;
+      border-radius: 10px;
+    }
+
+    .cart-info {
+      flex-grow: 1;
+      margin-top: 10px;
+      
+    }
+
+    .cart-total {
+      font-weight: bold;
+    }
+
+    .instructions, .estimated {
+      margin: 20px 0;
+      font-size: 14px;
+      color: gray;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 450px;
+    }
+
+    .checkout-btn {
+      background-color: violet;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+  .footer {
+  background-color: gray;
+  color: violet;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  height: 500px;
+  margin-top: 30px;
+  width: 100%;
+}
+.footer h1{
+  font-size: 45px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+.footer h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer h3{
+  color: violet;
+}
+
+.footer p {
+  font-size: 16px;
+  color: violet;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.email-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  min-width: 220px;
+  cursor: pointer;
+}
+
+.email-form button {
+  padding: 12px 18px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: #f2cce7;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer.email-form button:hover {
+  background-color: violet;
+  color: white;
+}
+
+
+
+.footer-bottom {
+  margin-top: 100px;
+  padding: 20px 10px;
+  font-size: 13px;
+  color: violet;
+  
+  
+}
+
+.footer-bottom p {
+  margin: 80px auto 0;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.footer-bottom a {
+  color: violet;
+  text-decoration: none;
+  margin: 0 5px;
+  padding-top: 100px;
+}
+
+
+
+
+@media (max-width: 1024px) {
+   
+
+
+    .lin {
+    display: none;
+  }
+
+ .menu-toggle {
+    display: block;
+    margin-top: 25px;
+    margin-right: 20px;
+  }
+  .close-btn{
+    margin-top: 16px;
+  }
+
+  .title-and-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+  .icon-cart {
+  margin-left: 700px;
+
+  margin-top: -50px;
+  font-size: 1.8rem;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+   
+
+   
+
+   
+}
+
+@media (max-width: 680px) {
+   
+
+
+    .lin {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+   
+  }
+
+   
+
+  .cosmetics{
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+
+  .title-and-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ion {
+  display: flex;
+  justify-content: flex-end; /* move icons to right */
+  align-items: center;
+/* space between cart and person */
+ 
+  margin-left: -400px;
+  margin-top: -10px;
+}
+
+
+.input-box a{
+  display: none;
+}
+
+
+  .footer h1 {
+    font-size: 26px;
+  }
+
+  .footer h2 {
+    font-size: 22px;
+  }
+
+  .footer h3 {
+    font-size: 18px;
+  }
+
+  .email-form input,
+  .email-form button {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+   
+
+   
+}
+

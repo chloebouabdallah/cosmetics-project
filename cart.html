@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+      color: #333;
+    }
+
+    .cart-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .cart-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .cart-item img {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .item-info p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .quantity-controls button {
+      width: 35px;
+      height: 35px;
+      border: none;
+      background-color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .quantity-controls input {
+      width: 50px;
+      text-align: center;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .special-instructions {
+      font-size: 14px;
+      color: #666;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .checkout-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: violet;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+      background-color: rgb(175, 102, 175);
+    }
+  </style>
+</head>
+<body>
+
+<div class="cart-container">
+  <div class="cart-header">Your cart</div>
+
+  <div class="cart-item">
+    <img src="img9.jpg" alt="Peony Lip Oil" />
+    <div class="item-info">
+      <h4>Peony Hydrating Lip Oil</h4>
+      <p>$<span class="unit-price">15.00</span></p>
+      
+      <div class="quantity-controls">
+        <button onclick="updateQty(-1)">-</button>
+        <input type="text" id="qty" value="1" readonly />
+        <button onclick="updateQty(1)">+</button>
+      </div>
+    </div>
+    <div class="item-total">
+      $<span id="item-total">15.00</span>
+    </div>
+  </div>
+
+  <div class="special-instructions">Order special instructions</div>
+
+  <div class="summary">
+    <span>Estimated total</span>
+    <span>$<span id="estimated-total">15.00</span> USD</span>
+  </div>
+
+  <button class="checkout-btn">Check out</button>
+</div>
+
+<script>
+  const unitPrice = 15.00;
+  const qtyInput = document.getElementById("qty");
+  const itemTotal = document.getElementById("item-total");
+  const estimatedTotal = document.getElementById("estimated-total");
+
+  function updateQty(change) {
+    let qty = parseInt(qtyInput.value);
+    qty = Math.max(1, qty + change);
+    qtyInput.value = qty;
+    const total = (unitPrice * qty).toFixed(2);
+    itemTotal.textContent = total;
+    estimatedTotal.textContent = total;
+  }
+</script>
+
+</body>
+</html>
