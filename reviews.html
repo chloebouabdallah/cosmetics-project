@@ -165,30 +165,29 @@
   border-radius: 5px;
   cursor: pointer;
 }
-@media(max-width: 600px){
+@media (max-width: 600px) {
+  
+  .reviews-section { padding: 20px; }
 
   .reviews-grid {
-  display: flex;
-  flex-wrap: wrap;
- 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 
-  margin-bottom: 20px;
   
-}
+  .review-card {
+    flex: 0 1 calc(50% - 12px);
+    width: calc(50% - 12px);
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
 
-
-.review-card {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  width: 150px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.carousel-btn {
-  display: none;
-}
-
-
+  .carousel-btn { display: none; }
 }
 
 
