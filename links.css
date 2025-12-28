@@ -427,6 +427,10 @@ li > a:visited::after {
   gap: 10px;
 }
 
+ .nav-links {
+  margin-top: 120px;
+}
+    
 .ion {
   display: flex;
   justify-content: flex-end; 
@@ -434,9 +438,7 @@ li > a:visited::after {
   margin-left: -400px;
   margin-top: -10px;
 }
-.nav-links {
-  margin-top: 120px;
-}
+
 
   /* Lower login button and icon under links */
   .bottom-icons {
@@ -476,4 +478,5 @@ li > a:visited::after {
   
    
 }
+
 
